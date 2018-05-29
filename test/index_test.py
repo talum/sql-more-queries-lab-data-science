@@ -10,9 +10,6 @@ table = sql_runner.execute_seed_file()
 
 class TestSQLMoreQueries(unittest.TestCase):
 
-    file = open("../select.py", "r")
-    file.read()
-
     def test_select_all_female_dogs_name_and_breed(self):
         result = [('Little Ann', 'coonhound'), ('Pickles', 'black lab'), ('Lassie', 'collie'), ('Snowy', 'fox terrier')]
         self.assertEqual(table.execute(select_all_female_dogs_name_and_breed()).fetchall(), result)
