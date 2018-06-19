@@ -34,7 +34,7 @@ Write your SQL queries in the `select.py` file.  Fill the empty string in each m
 
 * `select_all_dogs_names_in_alphabetical_order` returns the names of all dogs listed in alphabetical order.  Notice that SQL lists the nameless dog first.
 
-* `select_nameless_dog` returns the row of the dog that doesn't have a name
+* `select_nameless_dog` returns all information for any dog that doesn't have a name
 
 * `select_hungry_dogs_name_and_breed_ordered_by_youngest_to_oldest` returns the name and breed of only the hungry dogs and lists them from youngest to oldest
 
@@ -45,3 +45,7 @@ Write your SQL queries in the `select.py` file.  Fill the empty string in each m
 * `select_name_and_breed_of_dogs_between_age_five_and_ten_ordered_by_oldest_to_youngest` returns the name and breed of only the dogs who are between five and ten years old
 
 * `select_name_age_and_hungry_of_hungry_dogs_between_age_two_and_seven_in_alphabetical_order` returns the name, age, and hungry columns for hungry dogs between the ages of two and seven.  This query should also list these dogs in alphabetical order.
+
+## Summary
+
+Great work! In this lab we practiced writing more complex SQL statements to not only query specific information but also define the quantity of results and the order of our results. 
