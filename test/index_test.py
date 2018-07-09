@@ -2,7 +2,11 @@ import unittest
 from sql_runner import SQLRunner
 import sys
 sys.path.insert(0, '..')
-from select import *
+from selects import *
+
+sql_runner = SQLRunner()
+table = sql_runner.execute_create_file()
+table = sql_runner.execute_seed_file()
 
 sql_runner = SQLRunner()
 table = sql_runner.execute_create_file()
