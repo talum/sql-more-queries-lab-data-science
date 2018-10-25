@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="8" name="pytest" skips="0" tests="8" time="0.087"><testcase classname="test.index_test.TestSQLMoreQueries" file="test/index_test.py" line="20" name="test_select_all_dogs_names_in_alphabetical_order" time="0.0012712478637695312"><failure message="AssertionError: Lists differ: [] != [(None,), (&apos;Clifford&apos;,), (&apos;Lassie&apos;,), (&apos;Li[73 chars]y&apos;,)]
+
+Second list contains 9 additional elements.
+First extra element 0:
+(None,)
+
+- []
++ [(None,),
++  (&apos;Clifford&apos;,),
++  (&apos;Lassie&apos;,),
++  (&apos;Little Ann&apos;,),
++  (&apos;McGruff&apos;,),
++  (&apos;Pickles&apos;,),
++  (&apos;Scooby&apos;,),
++  (&apos;Snoopy&apos;,),
++  (&apos;Snowy&apos;,)]">self = &lt;index_test.TestSQLMoreQueries testMethod=test_select_all_dogs_names_in_alphabetical_order&gt;
+
+    def test_select_all_dogs_names_in_alphabetical_order(self):
+        result = [(None,), (&apos;Clifford&apos;,), (&apos;Lassie&apos;,), (&apos;Little Ann&apos;,), (&apos;McGruff&apos;,), (&apos;Pickles&apos;,), (&apos;Scooby&apos;,), (&apos;Snoopy&apos;,), (&apos;Snowy&apos;,)]
+&gt;       self.assertEqual(table.execute(select_all_dogs_names_in_alphabetical_order()).fetchall(), result)
+E       AssertionError: Lists differ: [] != [(None,), (&apos;Clifford&apos;,), (&apos;Lassie&apos;,), (&apos;Li[73 chars]y&apos;,)]
+E       
+E       Second list contains 9 additional elements.
+E       First extra element 0:
+E       (None,)
+E       
+E       - []
+E       + [(None,),
+E       +  (&apos;Clifford&apos;,),
+E       +  (&apos;Lassie&apos;,),
+E       +  (&apos;Little Ann&apos;,),
+E       +  (&apos;McGruff&apos;,),
+E       +  (&apos;Pickles&apos;,),
+E       +  (&apos;Scooby&apos;,),
+E       +  (&apos;Snoopy&apos;,),
+E       +  (&apos;Snowy&apos;,)]
+
+test/index_test.py:23: AssertionError</failure></testcase><testcase classname="test.index_test.TestSQLMoreQueries" file="test/index_test.py" line="16" name="test_select_all_female_dogs_name_and_breed" time="0.0009436607360839844"><failure message="AssertionError: Lists differ: [] != [(&apos;Little Ann&apos;, &apos;coonhound&apos;), (&apos;Pickles&apos;, [56 chars]er&apos;)]
+
+Second list contains 4 additional elements.
+First extra element 0:
+(&apos;Little Ann&apos;, &apos;coonhound&apos;)
+
+- []
++ [(&apos;Little Ann&apos;, &apos;coonhound&apos;),
++  (&apos;Pickles&apos;, &apos;black lab&apos;),
++  (&apos;Lassie&apos;, &apos;collie&apos;),
++  (&apos;Snowy&apos;, &apos;fox terrier&apos;)]">self = &lt;index_test.TestSQLMoreQueries testMethod=test_select_all_female_dogs_name_and_breed&gt;
+
+    def test_select_all_female_dogs_name_and_breed(self):
+        result = [(&apos;Little Ann&apos;, &apos;coonhound&apos;), (&apos;Pickles&apos;, &apos;black lab&apos;), (&apos;Lassie&apos;, &apos;collie&apos;), (&apos;Snowy&apos;, &apos;fox terrier&apos;)]
+&gt;       self.assertEqual(table.execute(select_all_female_dogs_name_and_breed()).fetchall(), result)
+E       AssertionError: Lists differ: [] != [(&apos;Little Ann&apos;, &apos;coonhound&apos;), (&apos;Pickles&apos;, [56 chars]er&apos;)]
+E       
+E       Second list contains 4 additional elements.
+E       First extra element 0:
+E       (&apos;Little Ann&apos;, &apos;coonhound&apos;)
+E       
+E       - []
+E       + [(&apos;Little Ann&apos;, &apos;coonhound&apos;),
+E       +  (&apos;Pickles&apos;, &apos;black lab&apos;),
+E       +  (&apos;Lassie&apos;, &apos;collie&apos;),
+E       +  (&apos;Snowy&apos;, &apos;fox terrier&apos;)]
+
+test/index_test.py:19: AssertionError</failure></testcase><testcase classname="test.index_test.TestSQLMoreQueries" file="test/index_test.py" line="28" name="test_select_hungry_dogs_name_and_breed_ordered_by_youngest_to_oldest" time="0.0007774829864501953"><failure message="AssertionError: Lists differ: [] != [(&apos;Snoopy&apos;, &apos;beagle&apos;), (&apos;Clifford&apos;, &apos;big r[102 chars]ab&apos;)]
+
+Second list contains 6 additional elements.
+First extra element 0:
+(&apos;Snoopy&apos;, &apos;beagle&apos;)
+
+- []
++ [(&apos;Snoopy&apos;, &apos;beagle&apos;),
++  (&apos;Clifford&apos;, &apos;big red&apos;),
++  (None, &apos;golden retriever&apos;),
++  (&apos;Scooby&apos;, &apos;great dane&apos;),
++  (&apos;Lassie&apos;, &apos;collie&apos;),
++  (&apos;Pickles&apos;, &apos;black lab&apos;)]">self = &lt;index_test.TestSQLMoreQueries testMethod=test_select_hungry_dogs_name_and_breed_ordered_by_youngest_to_oldest&gt;
+
+    def test_select_hungry_dogs_name_and_breed_ordered_by_youngest_to_oldest(self):
+        result = [(&apos;Snoopy&apos;, &apos;beagle&apos;), (&apos;Clifford&apos;, &apos;big red&apos;), (None, &apos;golden retriever&apos;), (&apos;Scooby&apos;, &apos;great dane&apos;), (&apos;Lassie&apos;, &apos;collie&apos;), (&apos;Pickles&apos;, &apos;black lab&apos;)]
+&gt;       self.assertEqual(table.execute(select_hungry_dogs_name_and_breed_ordered_by_youngest_to_oldest()).fetchall(), result)
+E       AssertionError: Lists differ: [] != [(&apos;Snoopy&apos;, &apos;beagle&apos;), (&apos;Clifford&apos;, &apos;big r[102 chars]ab&apos;)]
+E       
+E       Second list contains 6 additional elements.
+E       First extra element 0:
+E       (&apos;Snoopy&apos;, &apos;beagle&apos;)
+E       
+E       - []
+E       + [(&apos;Snoopy&apos;, &apos;beagle&apos;),
+E       +  (&apos;Clifford&apos;, &apos;big red&apos;),
+E       +  (None, &apos;golden retriever&apos;),
+E       +  (&apos;Scooby&apos;, &apos;great dane&apos;),
+E       +  (&apos;Lassie&apos;, &apos;collie&apos;),
+E       +  (&apos;Pickles&apos;, &apos;black lab&apos;)]
+
+test/index_test.py:31: AssertionError</failure></testcase><testcase classname="test.index_test.TestSQLMoreQueries" file="test/index_test.py" line="32" name="test_select_name_age_and_temperament_of_oldest_dog" time="0.0006544589996337891"><failure message="AssertionError: Lists differ: [] != [(&apos;Pickles&apos;, 13, &apos;mischievous&apos;)]
+
+Second list contains 1 additional elements.
+First extra element 0:
+(&apos;Pickles&apos;, 13, &apos;mischievous&apos;)
+
+- []
++ [(&apos;Pickles&apos;, 13, &apos;mischievous&apos;)]">self = &lt;index_test.TestSQLMoreQueries testMethod=test_select_name_age_and_temperament_of_oldest_dog&gt;
+
+    def test_select_name_age_and_temperament_of_oldest_dog(self):
+        result = [(&apos;Pickles&apos;, 13, &apos;mischievous&apos;)]
+&gt;       self.assertEqual(table.execute(select_name_age_and_temperament_of_oldest_dog()).fetchall(), result)
+E       AssertionError: Lists differ: [] != [(&apos;Pickles&apos;, 13, &apos;mischievous&apos;)]
+E       
+E       Second list contains 1 additional elements.
+E       First extra element 0:
+E       (&apos;Pickles&apos;, 13, &apos;mischievous&apos;)
+E       
+E       - []
+E       + [(&apos;Pickles&apos;, 13, &apos;mischievous&apos;)]
+
+test/index_test.py:35: AssertionError</failure></testcase><testcase classname="test.index_test.TestSQLMoreQueries" file="test/index_test.py" line="36" name="test_select_name_and_age_of_three_youngest_dogs" time="0.0007939338684082031"><failure message="AssertionError: Lists differ: [] != [(&apos;Snoopy&apos;, 3), (&apos;Clifford&apos;, 4), (None, 4)]
+
+Second list contains 3 additional elements.
+First extra element 0:
+(&apos;Snoopy&apos;, 3)
+
+- []
++ [(&apos;Snoopy&apos;, 3), (&apos;Clifford&apos;, 4), (None, 4)]">self = &lt;index_test.TestSQLMoreQueries testMethod=test_select_name_and_age_of_three_youngest_dogs&gt;
+
+    def test_select_name_and_age_of_three_youngest_dogs(self):
+        result = [(&apos;Snoopy&apos;, 3), (&apos;Clifford&apos;, 4), (None, 4)]
+&gt;       self.assertEqual(table.execute(select_name_and_age_of_three_youngest_dogs()).fetchall(), result)
+E       AssertionError: Lists differ: [] != [(&apos;Snoopy&apos;, 3), (&apos;Clifford&apos;, 4), (None, 4)]
+E       
+E       Second list contains 3 additional elements.
+E       First extra element 0:
+E       (&apos;Snoopy&apos;, 3)
+E       
+E       - []
+E       + [(&apos;Snoopy&apos;, 3), (&apos;Clifford&apos;, 4), (None, 4)]
+
+test/index_test.py:39: AssertionError</failure></testcase><testcase classname="test.index_test.TestSQLMoreQueries" file="test/index_test.py" line="40" name="test_select_name_and_breed_of_dogs_between_age_five_and_ten_ordered_by_oldest_to_youngest" time="0.0007760524749755859"><failure message="AssertionError: Lists differ: [] != [(&apos;McGruff&apos;, &apos;bloodhound&apos;), (&apos;Snowy&apos;, &apos;fox[83 chars]nd&apos;)]
+
+Second list contains 5 additional elements.
+First extra element 0:
+(&apos;McGruff&apos;, &apos;bloodhound&apos;)
+
+- []
++ [(&apos;McGruff&apos;, &apos;bloodhound&apos;),
++  (&apos;Snowy&apos;, &apos;fox terrier&apos;),
++  (&apos;Lassie&apos;, &apos;collie&apos;),
++  (&apos;Scooby&apos;, &apos;great dane&apos;),
++  (&apos;Little Ann&apos;, &apos;coonhound&apos;)]">self = &lt;index_test.TestSQLMoreQueries testMethod=test_select_name_and_breed_of_dogs_between_age_five_and_ten_ordered_by_oldest_to_youngest&gt;
+
+    def test_select_name_and_breed_of_dogs_between_age_five_and_ten_ordered_by_oldest_to_youngest(self):
+        result = [(&apos;McGruff&apos;, &apos;bloodhound&apos;), (&apos;Snowy&apos;, &apos;fox terrier&apos;), (&apos;Lassie&apos;, &apos;collie&apos;), (&apos;Scooby&apos;, &apos;great dane&apos;), (&apos;Little Ann&apos;, &apos;coonhound&apos;)]
+&gt;       self.assertEqual(table.execute(select_name_and_breed_of_dogs_between_age_five_and_ten_ordered_by_oldest_to_youngest()).fetchall(), result)
+E       AssertionError: Lists differ: [] != [(&apos;McGruff&apos;, &apos;bloodhound&apos;), (&apos;Snowy&apos;, &apos;fox[83 chars]nd&apos;)]
+E       
+E       Second list contains 5 additional elements.
+E       First extra element 0:
+E       (&apos;McGruff&apos;, &apos;bloodhound&apos;)
+E       
+E       - []
+E       + [(&apos;McGruff&apos;, &apos;bloodhound&apos;),
+E       +  (&apos;Snowy&apos;, &apos;fox terrier&apos;),
+E       +  (&apos;Lassie&apos;, &apos;collie&apos;),
+E       +  (&apos;Scooby&apos;, &apos;great dane&apos;),
+E       +  (&apos;Little Ann&apos;, &apos;coonhound&apos;)]
+
+test/index_test.py:43: AssertionError</failure></testcase><testcase classname="test.index_test.TestSQLMoreQueries" file="test/index_test.py" line="24" name="test_select_nameless_dog" time="0.0006067752838134766"><failure message="AssertionError: Lists differ: [] != [(9, None, 4, &apos;M&apos;, &apos;golden retriever&apos;, &apos;playful&apos;, 1)]
+
+Second list contains 1 additional elements.
+First extra element 0:
+(9, None, 4, &apos;M&apos;, &apos;golden retriever&apos;, &apos;playful&apos;, 1)
+
+- []
++ [(9, None, 4, &apos;M&apos;, &apos;golden retriever&apos;, &apos;playful&apos;, 1)]">self = &lt;index_test.TestSQLMoreQueries testMethod=test_select_nameless_dog&gt;
+
+    def test_select_nameless_dog(self):
+        result = [(9, None, 4, &apos;M&apos;, &apos;golden retriever&apos;, &apos;playful&apos;, 1)]
+&gt;       self.assertEqual(table.execute(select_nameless_dog()).fetchall(), result)
+E       AssertionError: Lists differ: [] != [(9, None, 4, &apos;M&apos;, &apos;golden retriever&apos;, &apos;playful&apos;, 1)]
+E       
+E       Second list contains 1 additional elements.
+E       First extra element 0:
+E       (9, None, 4, &apos;M&apos;, &apos;golden retriever&apos;, &apos;playful&apos;, 1)
+E       
+E       - []
+E       + [(9, None, 4, &apos;M&apos;, &apos;golden retriever&apos;, &apos;playful&apos;, 1)]
+
+test/index_test.py:27: AssertionError</failure></testcase><testcase classname="test.index_test.TestSQLMoreQueries" file="test/index_test.py" line="44" name="test_select_select_name_age_and_hungry_of_hungry_dogs_between_age_two_and_seven_in_alphabetical_order" time="0.0007200241088867188"><failure message="AssertionError: Lists differ: [] != [(None, 4, 1), (&apos;Clifford&apos;, 4, 1), (&apos;Lassi[41 chars], 1)]
+
+Second list contains 5 additional elements.
+First extra element 0:
+(None, 4, 1)
+
+- []
++ [(None, 4, 1),
++  (&apos;Clifford&apos;, 4, 1),
++  (&apos;Lassie&apos;, 7, 1),
++  (&apos;Scooby&apos;, 6, 1),
++  (&apos;Snoopy&apos;, 3, 1)]">self = &lt;index_test.TestSQLMoreQueries testMethod=test_select_select_name_age_and_hungry_of_hungry_dogs_between_age_two_and_seven_in_alphabetical_order&gt;
+
+    def test_select_select_name_age_and_hungry_of_hungry_dogs_between_age_two_and_seven_in_alphabetical_order(self):
+        result = [(None, 4, 1), (&apos;Clifford&apos;, 4, 1), (&apos;Lassie&apos;, 7, 1), (&apos;Scooby&apos;, 6, 1), (&apos;Snoopy&apos;, 3, 1)]
+&gt;       self.assertEqual(table.execute(select_name_age_and_hungry_of_hungry_dogs_between_age_two_and_seven_in_alphabetical_order()).fetchall(), result)
+E       AssertionError: Lists differ: [] != [(None, 4, 1), (&apos;Clifford&apos;, 4, 1), (&apos;Lassi[41 chars], 1)]
+E       
+E       Second list contains 5 additional elements.
+E       First extra element 0:
+E       (None, 4, 1)
+E       
+E       - []
+E       + [(None, 4, 1),
+E       +  (&apos;Clifford&apos;, 4, 1),
+E       +  (&apos;Lassie&apos;, 7, 1),
+E       +  (&apos;Scooby&apos;, 6, 1),
+E       +  (&apos;Snoopy&apos;, 3, 1)]
+
+test/index_test.py:47: AssertionError</failure></testcase></testsuite>
